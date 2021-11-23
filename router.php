@@ -14,6 +14,8 @@ if(isset($_GET['uri'])){
         echo Home::getHome();
     }elseif($params['view'] == 'devocional'){
         echo Devocional::getDevocional($params['action']);
+    }else{
+        echo Page::getPage('<h1>Página não encontrada ou em manutenção!</h1>');
     }
 }else{
     echo Home::getHome();

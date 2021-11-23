@@ -4,11 +4,12 @@ namespace App\Controller\View;
 
 use App\Utils\View;
 
-class Home
+class Home extends Page
 {
     
     public static function getHome()
     {
-        return View::render('pages/home');
+        $content = View::render('pages/home');
+        return parent::getPage($content);
     }
 }

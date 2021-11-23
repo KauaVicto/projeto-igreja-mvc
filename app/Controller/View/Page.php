@@ -6,8 +6,10 @@ use App\Utils\View;
 class Page
 {
 
-    public static function getPage()
+    public static function getPage($content)
     {
-        return View::render('pages/page');
+        return View::render('pages/page', [
+            'content' => $content
+        ]);
     }
 }

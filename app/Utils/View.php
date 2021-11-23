@@ -17,10 +17,15 @@ class View
      * Método responsável por retornar o conteúdo renderizado da view
      * @param string $view
      */
-    public static function render($view)
+    public static function render($view, $vars = [])
     {
-        $content = self::getContext($view);
+        $contentRender = self::getContext($view);
 
-        return $content;
+        foreach($vars as $key => $var){
+            $contentRender = str_replace('{{'.$key.'}}', $var, $contentRender);
+        }
+
+
+        return $contentRender;
     }
 }

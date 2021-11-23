@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+:root{
+    --cor-verde-escuro: #0D7233;
+    --cor-vermelho-escuro: rgb(214, 18, 18);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    background-image: url('../img/background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* --------------- barra de rolagem --------------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background:#12A348;
+}
+::-webkit-scrollbar-thumb {
+    background: #095225;
+    border-radius: 10px;
+}
+/* --------------- Seleção --------------- */
+::selection{
+    background-color: #00500f9d;
+}
+
+/* --------------- HEADER --------------- */
+.container-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container-header .logo img{
+    height: 100px;
+    margin: 10px 0 0 10px;
+}   
+
+.container-header nav{
+    width: 80%;
+    background-color: var(--cor-verde-escuro);
+}
+
+.container-header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    
+}
+
+.container-header nav ul li{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-header nav ul li a{
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease;
+}
+
+.container-header nav ul li a:hover{
+    background-color: var(--cor-vermelho-escuro);
+}
+
+
+
+/* --------------- FOOTER --------------- */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-verde-escuro);
+}

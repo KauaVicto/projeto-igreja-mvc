@@ -10,7 +10,8 @@ class Page
     {
         return View::render('pages/page', [
             'title' => $title,
-            'content' => $content
+            'content' => $content,
+            'pasta_raiz' => PASTA_RAIZ
         ]);
     }
 }
